@@ -17,6 +17,7 @@ ReactDOM.render(
     <BrowserRouter>
       <div>
         <Route path="/" component = {PostIndex} />
+        <Route path="/test" component = {PostIndex} />
       </div>
     </BrowserRouter>
   </Provider>
