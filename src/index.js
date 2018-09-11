@@ -6,7 +6,7 @@ import promise from 'redux-promise';
 
 import reducers from './reducers';
 
-import {BrowserRouter, Route  } from 'react-router-dom';
+import {BrowserRouter, Route, Switch  } from 'react-router-dom';
 
 import PostIndex from './components/posts_index'
 import PostNew from './components/posts_new'
@@ -17,10 +17,12 @@ ReactDOM.render(
   <Provider store={createStoreWithMiddleware(reducers)}>
     <BrowserRouter>
       <div>
-      
+      <Switch>
       <Route path="/post/new" component = {PostNew} />  
         <Route path="/" component = {PostIndex} />
+        </Switch>
       </div>
+
     </BrowserRouter>
   </Provider>
   , document.querySelector('.container'));
