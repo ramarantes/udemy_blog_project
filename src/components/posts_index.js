@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import { bindActionCreators } from 'redux';
 import {fetchPosts} from '../actions';
 import _ from 'lodash';
+import { Link } from 'react-router-dom';
 
 function mapStateToProps(state){
     return {
@@ -43,6 +44,11 @@ class PostIndex extends Component {
         console.log('normal');
         return ( 
             <div>
+                <div className="text-xs-right">
+                    <Link className="btn btn-primary" to="/post/new">
+                        Add a Post
+                    </Link>
+                </div>
                 <h3>Posts</h3>
                 <ul className="list-group">
                     {this.renderPosts()}
