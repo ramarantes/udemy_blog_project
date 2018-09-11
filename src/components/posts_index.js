@@ -40,6 +40,7 @@ class PostIndex extends Component {
     }
 
     render(){
+        console.log('normal');
         return ( 
             <div>
                 <h3>Posts</h3>
