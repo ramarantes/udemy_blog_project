@@ -5,7 +5,6 @@ import { createStore, applyMiddleware } from 'redux';
 import promise from 'redux-promise';
 
 import reducers from './reducers';
-
 import Routes from './routes';
 
 
